@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myfirstdemo-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myfirstdemo
+  template:
+    metadata:
+      labels:
+        app: myfirstdemo
+    spec:
+      containers:
+        - name: myfirstdemo
+          image: vsreddyonline/vsreddy:v1
+          ports:
+            - containerPort: 8080
+
+# test comment
